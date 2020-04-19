@@ -11,14 +11,19 @@ import android.widget.Toast;
 
 import com.hautec.hiotcloud.R;
 import com.hautec.hiotcloud.base.BaseActivity;
+import com.hautec.hiotcloud.test.dagger2test.DaggerPresenterComponent;
+import com.hautec.hiotcloud.test.dagger2test.PresenterComponent;
 import com.hautec.hiotcloud.test.mvptest.model.User;
 
+import javax.inject.Inject;
+
 public class TestMVPActivity extends BaseActivity<TestView,TestPresenter> implements TestView {
-    private TestPresenter presenter;
+    @Inject
+    TestPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        presenter = new TestPresenter();
+        getComponent().inject(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_mvp);
         final EditText etUserName = findViewById(R.id.et_user_name);
@@ -56,4 +61,13 @@ public class TestMVPActivity extends BaseActivity<TestView,TestPresenter> implem
 //            Toast.makeText(this, "登录失败", Toast.LENGTH_SHORT).show();
 //        }
  // }
+
+    /**
+     * 创建注入器
+     * @return
+     */
+    public PresenterComponent getComponent(){
+        return DaggerPresenterComponent.builder().build();
+
+    }
 }
