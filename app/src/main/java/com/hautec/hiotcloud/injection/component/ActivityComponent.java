@@ -19,6 +19,7 @@ package com.hautec.hiotcloud.injection.component;
 import com.hautec.hiotcloud.injection.PerActivity;
 import com.hautec.hiotcloud.injection.module.ActivityModule;
 import com.hautec.hiotcloud.main.MainActivity;
+import com.hautec.hiotcloud.test.mvptest.TestMVPActivity;
 
 import dagger.Component;
 
@@ -33,6 +34,7 @@ import dagger.Component;
 public interface ActivityComponent {
 
     void inject(MainActivity mainActivity);
+    void inject(TestMVPActivity testMVPActivity);
 
     @Component.Builder
     interface ActivityComponentBuilder {

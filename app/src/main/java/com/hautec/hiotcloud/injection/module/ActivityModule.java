@@ -18,6 +18,7 @@ package com.hautec.hiotcloud.injection.module;
 import android.app.Activity;
 
 import com.hautec.hiotcloud.injection.PerActivity;
+import com.hautec.hiotcloud.test.dagger2test.ThirdObj;
 
 import dagger.Module;
 import dagger.Provides;
@@ -42,4 +43,8 @@ public class ActivityModule {
         return this.activity;
     }
 
+    @Provides
+    public ThirdObj getThirdObj(){
+        return new ThirdObj();
+    }
 }
