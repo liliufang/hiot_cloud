@@ -1,4 +1,7 @@
 package com.hautec.hiotcloud.test.mvptest;
-public interface TestView {
+
+import com.hautec.hiotcloud.base.BaseView;
+
+public interface TestView extends BaseView {
   void showMessage(String msg);
 }
