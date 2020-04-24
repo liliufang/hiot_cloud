@@ -1,9 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".main.MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_bg"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <RadioButton
+                style="@style/mainRadioButtonStyle"
+                android:drawableTop="@drawable/main_label_message"
+                android:text="消息" />
+
+            <RadioButton
+                style="@style/mainRadioButtonStyle"
+                android:text="设备" />
+
+            <RadioButton
+                style="@style/mainRadioButtonStyle"
+                android:drawableTop="@drawable/main_label_scene"
+                android:text="场景" />
+
+            <RadioButton
+                style="@style/mainRadioButtonStyle"
+                android:drawableTop="@drawable/main_label_mine"
+                android:text="我的" />
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>
