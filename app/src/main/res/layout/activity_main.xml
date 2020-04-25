@@ -8,6 +8,7 @@
     tools:context=".main.MainActivity">
 
     <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_main"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
@@ -19,6 +20,7 @@
         android:orientation="horizontal">
 
         <RadioGroup
+            android:id="@+id/rg_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
@@ -26,20 +28,24 @@
             android:paddingBottom="5dp">
 
             <RadioButton
+                android:id="@+id/rb_message"
                 style="@style/mainRadioButtonStyle"
                 android:drawableTop="@drawable/main_label_message"
                 android:text="消息" />
 
             <RadioButton
+                android:id="@+id/rb_equipment"
                 style="@style/mainRadioButtonStyle"
                 android:text="设备" />
 
             <RadioButton
+                android:id="@+id/rb_scene"
                 style="@style/mainRadioButtonStyle"
                 android:drawableTop="@drawable/main_label_scene"
                 android:text="场景" />
 
             <RadioButton
+                android:id="@+id/rb_mine"
                 style="@style/mainRadioButtonStyle"
                 android:drawableTop="@drawable/main_label_mine"
                 android:text="我的" />

@@ -23,14 +23,12 @@ public class TestMVPActivity extends BaseActivity<TestView,TestPresenter> implem
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-       getActivityComponent().inject(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_mvp);
         final EditText etUserName = findViewById(R.id.et_user_name);
         final EditText etPassword = findViewById(R.id.et_password);
         Button btnLogin = findViewById(R.id.btn_login);
         final User user = new User();
-   //    final TestPresenter presenter = new TestPresenter();
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +45,11 @@ public class TestMVPActivity extends BaseActivity<TestView,TestPresenter> implem
     public TestPresenter createPresenter() {
         return presenter;
 
+    }
+
+    @Override
+    public void injectIndependies() {
+        getActivityComponent().inject(this);
     }
 
     @Override
