@@ -1,10 +1,6 @@
 package com.hautec.hiotcloud.test.mvptest;
 
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.hautec.hiotcloud.base.BasePresenter;
-import com.hautec.hiotcloud.base.BaseView;
+import com.hautec.hiotcloud.ui.base.BasePresenter;
 import com.hautec.hiotcloud.test.dagger2test.ThirdObj;
 import com.hautec.hiotcloud.test.mvptest.model.User;
 
